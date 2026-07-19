@@ -9,5 +9,10 @@ public class ConversationStep_new
     
     public List<string> dialogues;  // dialogue list
 
-    public bool isQuestion; // if its a question/prompts a choice response
+    public List<DialogueChoice> choices;
+
+    public bool IsQuestion()
+    {
+        return choices != null && choices.Count > 0;
+    }
 }

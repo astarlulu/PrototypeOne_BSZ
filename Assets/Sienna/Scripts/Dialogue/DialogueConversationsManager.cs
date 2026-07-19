@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Multiplayer.Center.Common;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -12,10 +13,13 @@ public class DialogueConversationsManager : MonoBehaviour
     
     // new version
     [SerializeField] private ConversationReader cReader;
+    [SerializeField] private GameObject dialogueChoicePanel;
     [SerializeField] private List<ConversationStep_new> steps = new List<ConversationStep_new>();
     
     
     [SerializeField] private float trasitionDelay = 0.5f;
+
+    private string currentSpeaker;
 
     private int currentStep = 0;
     public bool conversationActive = false;
@@ -37,11 +41,18 @@ public class DialogueConversationsManager : MonoBehaviour
 
         if (!cReader.started && !cReader.waiting)
         {
-            StartCoroutine(WaitAndAdvance());
+            if (step.IsQuestion())
+            {
+                ShowChoices(true);
+            }
+            else
+            {
+                StartCoroutine(WaitAndAdvance());
+            }
+            
         }
     }
-
-
+    // ========= Dialogeu/Converstaion main =========
     public void StartConversation()
     {
         if (steps.Count == 0)
@@ -72,6 +83,8 @@ public class DialogueConversationsManager : MonoBehaviour
             Debug.LogError($"Step {currentStep} has no speaker assigned!");
             return;
         }
+        
+        currentSpeaker = step.speaker;
 
         cReader.StartDialogue(step.speaker, step.dialogues);
     }
@@ -103,5 +116,29 @@ public class DialogueConversationsManager : MonoBehaviour
         }
     }
 
+    // ======== Dialogue Choices =========
 
+    public bool waitingForChoice;
+    private List<DialogueChoice> currentChoices;
+
+
+    public void ShowChoices(ConversationStep_new step)
+    {
+        currentChoices = step.choices;
+        dialogueChoicePanel.SetActive(true);
+    }
+
+    public void SelectChoice(int index)
+    {
+        DialogueChoice choice = currentChoices[index];
+        
+        GameManager.Instance.IncreaseMonsterScore(choice.monsterPoints);
+        
+        ShowChoices(false);
+        
+        cReader.StartDialogue(currentSpeaker, choice.response);
+
+        
+        waitingForChoice = false;
+    }
 }
