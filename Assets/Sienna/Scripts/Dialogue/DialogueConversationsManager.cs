@@ -43,7 +43,7 @@ public class DialogueConversationsManager : MonoBehaviour
         {
             if (step.IsQuestion())
             {
-                ShowChoices(true);
+                ShowChoices(step);
             }
             else
             {
@@ -134,7 +134,7 @@ public class DialogueConversationsManager : MonoBehaviour
         
         GameManager.Instance.IncreaseMonsterScore(choice.monsterPoints);
         
-        ShowChoices(false);
+        ShowChoices(steps[currentStep]);
         
         cReader.StartDialogue(currentSpeaker, choice.response);
 
