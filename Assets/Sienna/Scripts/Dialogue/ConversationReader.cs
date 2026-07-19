@@ -3,21 +3,25 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
-using UnityEngine.InputSystem; // new input system
+using UnityEngine.InputSystem; 
 
-public class Dialogue : MonoBehaviour
+public class ConversationReader : MonoBehaviour
 {
+    // public ConversationStep_new cStep;
+    private List<string> currentDialogue;
 
-    public GameObject text;
-    public TMP_Text dialogueText;
+    private InputAction interactAction; // replace mouse click
+    [SerializeField] private InputActionReference interactActionRef;
+
+    [SerializeField] private GameObject text;
+    [SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private TMP_Text nameText;
 
 
-    public List<string> dialogues;
+    private int indexStart;
+    private int indexEnd;
 
-    public int indexStart;
-    public int indexEnd;
-
-    public int index;
+    private int index;
 
     private int charIndex;
     public float writingSpeed;
@@ -28,12 +32,12 @@ public class Dialogue : MonoBehaviour
     public bool waiting;
 
 
-    //multi dialogue or not
-    //public bool multipleDialogues;
 
     void Start()
     {
         ToggleWindow(false);
+        interactAction = interactActionRef.action;
+
     }
 
 
@@ -44,9 +48,8 @@ public class Dialogue : MonoBehaviour
 
     }
 
-    public void StartDialogue()
+    public void StartDialogue(string speaker, List<string> dialogue)
     {
-
         if (started)
             return;
 
@@ -54,6 +57,12 @@ public class Dialogue : MonoBehaviour
 
         charIndex = 0;
         ToggleWindow(true);
+
+        currentDialogue = dialogue;
+        indexStart = 0;
+        indexEnd = dialogue.Count - 1;
+
+        nameText.text = speaker;
 
         GetDialogue(indexStart);
 
@@ -84,19 +93,18 @@ public class Dialogue : MonoBehaviour
 
 
 
-    public IEnumerator Writing()   //chatgpt vr
+    public IEnumerator Writing()
     {
 
         yield return new WaitForSeconds(writingSpeed);
 
-        string currentDialogue = dialogues[index];
+        string current = currentDialogue[index];
 
         charIndex = 0;
 
-        //this works (chatgpt)
-        while (charIndex < currentDialogue.Length)
+        while (charIndex < current.Length)
         {
-            dialogueText.text += currentDialogue[charIndex];
+            dialogueText.text += current[charIndex];
             charIndex++;
             yield return new WaitForSeconds(writingSpeed);
         }
@@ -105,10 +113,6 @@ public class Dialogue : MonoBehaviour
 
     }
 
-    IEnumerator WaitSeconds()
-    {
-        yield return new WaitForSeconds(1);
-    }
 
     private void Update()
     {
@@ -118,15 +122,8 @@ public class Dialogue : MonoBehaviour
             return;
 
 
-        if (Mouse.current.leftButton.wasPressedThisFrame) // new input system
+        if (interactAction.WasPressedThisFrame()) // new input system
         {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
-
-            //if (hit.collider == null)
-            //    return;
-                
-
             if (waitForNext)
             {
                 waitForNext = false;
@@ -138,7 +135,6 @@ public class Dialogue : MonoBehaviour
                 }
                 else
                 {
-
                     index--;
                     EndDialogue();
                 }
@@ -147,14 +143,4 @@ public class Dialogue : MonoBehaviour
 
         }
     }
-
-    public bool IsDialogueActive => started;
-    public void StartDialogueRange(int start, int end)
-    {
-        indexStart = start;
-        indexEnd = end;
-        StartDialogue();
-    }
-
-
 }

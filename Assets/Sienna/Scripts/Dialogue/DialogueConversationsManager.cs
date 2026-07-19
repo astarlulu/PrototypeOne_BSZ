@@ -8,7 +8,13 @@ public class DialogueConversationsManager : MonoBehaviour
 {
     [Header("Conversation Sequence")]
     [SerializeField] private string conversationName;
-    [SerializeField] private List<ConversationStep> steps = new List<ConversationStep>();
+    // [SerializeField] private List<ConversationStep> steps = new List<ConversationStep>();
+    
+    // new version
+    [SerializeField] private ConversationReader cReader;
+    [SerializeField] private List<ConversationStep_new> steps = new List<ConversationStep_new>();
+    
+    
     [SerializeField] private float trasitionDelay = 0.5f;
 
     private int currentStep = 0;
@@ -29,7 +35,7 @@ public class DialogueConversationsManager : MonoBehaviour
 
         var step = steps[currentStep];
 
-        if(!step.speaker.started && !step.speaker.waiting)
+        if (!cReader.started && !cReader.waiting)
         {
             StartCoroutine(WaitAndAdvance());
         }
@@ -50,10 +56,10 @@ public class DialogueConversationsManager : MonoBehaviour
     public void EndConversation()
     {
         conversationActive = false;
-        steps.ForEach(step => step.speaker.EndDialogue());
+        steps.ForEach(step => cReader.EndDialogue());
     }
 
-    private void StartStep(ConversationStep step)
+    private void StartStep(ConversationStep_new step)
     {
         if (step == null)
         {
@@ -67,17 +73,7 @@ public class DialogueConversationsManager : MonoBehaviour
             return;
         }
 
-        step.speaker.indexStart = step.startLine;
-        step.speaker.indexEnd = step.endLine;
-
-        // if(step.trigger != null)
-        // {
-        //     step.trigger.dialogueStartLine = step.startLine;
-        //     step.trigger.dialogueEndLine = step.endLine;
-        // }
-
-        step.speaker.StartDialogue();
-
+        cReader.StartDialogue(step.speaker, step.dialogues);
     }
 
     private IEnumerator WaitAndAdvance()
@@ -103,15 +99,9 @@ public class DialogueConversationsManager : MonoBehaviour
         {
             if(!conversationActive || currentStep >= steps.Count)
                 return false;
-            return steps[currentStep].speaker.started;
+            return cReader.started;
         }
     }
 
-    //public void StartDialogueRange(Dialogue speaker, int start, int end)
-    //{
-    //    speaker.indexStart = start;
-    //    speaker.indexEnd = end;
-    //    speaker.StartDialogue();
-    //}
 
 }
