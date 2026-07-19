@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Multiplayer.Center.Common;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -21,7 +22,7 @@ public class DialogueConversationsManager : MonoBehaviour
 
     private string currentSpeaker;
 
-    private int currentStep = 0;
+    public int currentStep = 0;
     public bool conversationActive = false;
     private bool waitingForNext = false;
 
@@ -39,11 +40,12 @@ public class DialogueConversationsManager : MonoBehaviour
 
         var step = steps[currentStep];
 
-        if (!cReader.started && !cReader.waiting)
+        if (!cReader.started && !cReader.waiting && !waitingForChoice)
         {
             if (step.IsQuestion())
             {
-                ShowChoices(step);
+                ShowChoices(step, true);
+                waitingForChoice = true;
             }
             else
             {
@@ -52,6 +54,7 @@ public class DialogueConversationsManager : MonoBehaviour
             
         }
     }
+
     // ========= Dialogeu/Converstaion main =========
     public void StartConversation()
     {
@@ -85,7 +88,6 @@ public class DialogueConversationsManager : MonoBehaviour
         }
         
         currentSpeaker = step.speaker;
-
         cReader.StartDialogue(step.speaker, step.dialogues);
     }
 
@@ -122,11 +124,12 @@ public class DialogueConversationsManager : MonoBehaviour
     private List<DialogueChoice> currentChoices;
 
 
-    public void ShowChoices(ConversationStep_new step)
+    public void ShowChoices(ConversationStep_new step, bool show)
     {
         currentChoices = step.choices;
-        dialogueChoicePanel.SetActive(true);
-        
+        dialogueChoicePanel.SetActive(show);
+
+        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         cameraLookScript.enabled = false;
     }
@@ -138,15 +141,27 @@ public class DialogueConversationsManager : MonoBehaviour
         
         GameManager.Instance.IncreaseMonsterScore(choice.monsterPoints);
         
-        ShowChoices(steps[currentStep]);
+        ShowChoices(steps[currentStep], false);
         
         cReader.StartDialogue(currentSpeaker, choice.response);
-
         waitingForChoice = false;
-        
+
+        //StepAfterChoice(index);
+        currentStep = choice.nextStep - 1;
+        StartStep(steps[currentStep]);
+
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        cameraLookScript.enabled = true;        
+        cameraLookScript.enabled = true;
+        
     }
+
+    //public void StepAfterChoice(int index)
+    //{
+    //    DialogueChoice choice = currentChoices[index];
+    //    StartStep(steps[choice.nextStep]);
+    //    Debug.Log("Go next...");
+    //}
 
     // ==== for camera follow pausing ====
     private PlayerCamera cameraLookScript;

@@ -50,6 +50,7 @@ public class ConversationReader : MonoBehaviour
 
     public void StartDialogue(string speaker, List<string> dialogue)
     {
+        
         if (started)
             return;
 
