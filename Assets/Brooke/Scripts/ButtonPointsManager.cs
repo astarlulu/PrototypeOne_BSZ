@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class ButtonPointsManager : MonoBehaviour
 {
+    //thorw away code will be later replaced with dialouge choices
     public float stepValue = 1f;
 
     [Header("Button Refernces")]

@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class SliderBar : MonoBehaviour
 {
+    //code will change when connecting to dailouge
+
     [Header("UI Refernce")]
     [SerializeField] private Slider sliderBar;
 
