@@ -126,10 +126,14 @@ public class DialogueConversationsManager : MonoBehaviour
     {
         currentChoices = step.choices;
         dialogueChoicePanel.SetActive(true);
+        
+        Cursor.visible = true;
+        cameraLookScript.enabled = false;
     }
 
     public void SelectChoice(int index)
     {
+        Debug.Log("Dialogue choice is selcted.");
         DialogueChoice choice = currentChoices[index];
         
         GameManager.Instance.IncreaseMonsterScore(choice.monsterPoints);
@@ -138,7 +142,19 @@ public class DialogueConversationsManager : MonoBehaviour
         
         cReader.StartDialogue(currentSpeaker, choice.response);
 
-        
         waitingForChoice = false;
+        
+        Cursor.visible = false;
+        cameraLookScript.enabled = true;        
     }
+
+    // ==== for camera follow pausing ====
+    private PlayerCamera cameraLookScript;
+
+    private void Awake()
+    {
+        dialogueChoicePanel.SetActive(false);
+        cameraLookScript = Object.FindAnyObjectByType<PlayerCamera>();
+    }
+
 }
