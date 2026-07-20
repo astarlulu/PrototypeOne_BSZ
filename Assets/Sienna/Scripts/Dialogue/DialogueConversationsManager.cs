@@ -156,13 +156,6 @@ public class DialogueConversationsManager : MonoBehaviour
         
     }
 
-    //public void StepAfterChoice(int index)
-    //{
-    //    DialogueChoice choice = currentChoices[index];
-    //    StartStep(steps[choice.nextStep]);
-    //    Debug.Log("Go next...");
-    //}
-
     // ==== for camera follow pausing ====
     private PlayerCamera cameraLookScript;
 
