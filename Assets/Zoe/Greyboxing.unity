@@ -4323,6 +4323,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1161060106}
     m_Modifications:
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1166359329}
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: interactionRange
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1225938127320393227, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4573,6 +4581,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1161060106}
     m_Modifications:
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1166359329}
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: interactionRange
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1225938127320393227, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -17702,6 +17718,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1161060106}
     m_Modifications:
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1166359329}
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: interactionRange
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3285241608727843361, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37.92369
@@ -23727,6 +23751,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1161060106}
     m_Modifications:
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1166359329}
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: interactionRange
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1225938127320393227, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -28596,6 +28628,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1161060106}
     m_Modifications:
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1166359329}
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: interactionRange
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1225938127320393227, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -34060,6 +34100,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1161060106}
     m_Modifications:
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1166359329}
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: interactionRange
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1225938127320393227, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -41803,6 +41851,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1161060106}
     m_Modifications:
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1166359329}
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: interactionRange
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1225938127320393227, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -44859,6 +44915,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1161060106}
     m_Modifications:
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1166359329}
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: interactionRange
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1225938127320393227, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -49390,6 +49454,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1161060106}
     m_Modifications:
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1166359329}
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: interactionRange
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1225938127320393227, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -51147,6 +51219,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1161060106}
     m_Modifications:
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1166359329}
+    - target: {fileID: 1197482476616367130, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: interactionRange
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1225938127320393227, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_Sprite
       value: 
