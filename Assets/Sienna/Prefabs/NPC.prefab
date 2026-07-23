@@ -1522,7 +1522,7 @@ GameObject:
   - component: {fileID: 5162743103867183856}
   - component: {fileID: 5399194054662931747}
   - component: {fileID: 2243288121393556959}
-  - component: {fileID: 1197482476616367130}
+  - component: {fileID: 8804553917369439736}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -1590,7 +1590,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.7068334, y: 2, z: 4.816496}
   m_Center: {x: 0.33213258, y: 0, z: 0.38500214}
---- !u!114 &1197482476616367130
+--- !u!114 &8804553917369439736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1599,12 +1599,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7415482928891509069}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b968cfac8a7168946a166d0d62888385, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b0b7287487440542b8812d1317c473d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
   interactActionRef: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   conversationScript: {fileID: 4589619301702869650}
   exclamationSprite: {fileID: 1004292251628384460}
+  playerCamera: {fileID: 0}
+  interactionRange: 8
 --- !u!1 &7469629545864724338
 GameObject:
   m_ObjectHideFlags: 0

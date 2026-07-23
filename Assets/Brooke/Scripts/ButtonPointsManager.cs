@@ -7,6 +7,7 @@ public class ButtonPointsManager : MonoBehaviour
     public float stepValue = 1f;
 
     [Header("Button Refernces")]
+    public Button finalButton;
     public Button removeButton;
     public Button addButton;
 
