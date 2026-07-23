@@ -26,7 +26,7 @@ public class InteractTrigger : MonoBehaviour
 
     public void Update()
     {
-        Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * interactionRange, Color.red); //show raycast line/checking distance
+        Debug.DrawRay(playerCamera.transform.position, playerCamera.transform.forward * interactionRange, Color.cornflowerBlue); //show raycast line/checking distance
 
         RaycastHit hit;
 
