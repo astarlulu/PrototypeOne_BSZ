@@ -42,7 +42,11 @@ public class DialogueConversationsManager : MonoBehaviour
 
         if (!cReader.started && !cReader.waiting && !waitingForChoice)
         {
-            if (step.IsQuestion())
+            if (step.endOfConversation == true)
+            {
+                EndConversation();
+            }
+            else if (step.IsQuestion())
             {
                 ShowChoices(step, true);
                 waitingForChoice = true;
@@ -94,11 +98,11 @@ public class DialogueConversationsManager : MonoBehaviour
     private IEnumerator WaitAndAdvance()
     {
         waitingForNext = true;
-        Debug.Log($"Waiting to advance from step {currentStep}...");
+        //Debug.Log($"Waiting to advance from step {currentStep}...");
         yield return new WaitForSeconds(trasitionDelay);
 
         currentStep++;
-        Debug.Log($"Advancing to step {currentStep} / total {steps.Count}");
+        //Debug.Log($"Advancing to step {currentStep} / total {steps.Count}");
 
         if (currentStep < steps.Count)
             StartStep(steps[currentStep]);
@@ -143,7 +147,7 @@ public class DialogueConversationsManager : MonoBehaviour
         
         ShowChoices(steps[currentStep], false);
         
-        cReader.StartDialogue(currentSpeaker, choice.responseLines);
+        // cReader.StartDialogue(currentSpeaker, choice.responseLines);
         waitingForChoice = false;
 
         //StepAfterChoice(index);

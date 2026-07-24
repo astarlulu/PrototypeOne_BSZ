@@ -12,6 +12,7 @@ public class ConversationStep_new
     public List<DialogueLine> dialogueLines;
 
     public List<DialogueChoice> choices;
+    public bool endOfConversation;
 
     public bool IsQuestion()
     {
@@ -32,7 +33,7 @@ public class DialogueChoice
 {
     public string buttonText;
 
-    public List<DialogueLine> responseLines;
+    // public List<DialogueLine> responseLines;
 
     public int monsterPoints;
     public int nextStep;

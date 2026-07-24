@@ -539,6 +539,135 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1056235209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1056235211}
+  - component: {fileID: 1056235210}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1056235210
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056235209}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1056235211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056235209}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.06729, y: 2.05265, z: -3.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1100298662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,6 +1163,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 389393086101698490, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: m_text
+      value: Of Course.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763363599064502145, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: m_text
+      value: Nope.
+      objectReference: {fileID: 0}
     - target: {fileID: 3285241608727843361, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07441
@@ -1078,6 +1215,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 4476708469913658824, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1056235210}
+    - target: {fileID: 4476708469913658824, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: writingSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549590784468265712, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: m_text
+      value: Just moved here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[5].speaker
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[6].speaker
+      value: Monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[7].speaker
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[8].speaker
+      value: Monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[4].endOfConversation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[5].endOfConversation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[6].endOfConversation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[7].endOfConversation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[8].endOfConversation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: steps.Array.data[0].dialogues.Array.size
       value: 1
@@ -1091,8 +1280,159 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[1].dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[2].dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[3].dialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[4].dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[5].dialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[6].dialogueLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[7].dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[8].dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[2].choices.Array.data[0].nextStep
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[2].choices.Array.data[1].nextStep
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[2].choices.Array.data[2].nextStep
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: steps.Array.data[0].dialogueLines.Array.data[0].text
+      value: You um, from around these parts?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[1].dialogueLines.Array.data[0].text
+      value: Me? Why do you ask?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[2].choices.Array.data[0].buttonText
+      value: Nope.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[2].choices.Array.data[1].buttonText
+      value: Of Course.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[2].choices.Array.data[2].buttonText
+      value: Just moved here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[2].dialogueLines.Array.data[0].text
+      value: "You don\u2019t look like the usual folks who pass through here."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[3].dialogueLines.Array.data[0].text
+      value: "Oh yeah course. I\u2019ve lived here my whole life."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[3].dialogueLines.Array.data[1].text
+      value: "I may look human I get it from my father's side of the family, but
+        trust me I\u2019m defiantly a monster just like you ha-ha "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[4].dialogueLines.Array.data[0].text
+      value: "Yeah, you\u2019re not fooling anyone, human freak "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[5].dialogueLines.Array.data[0].text
+      value: "Nope\u2026 yeah nah. No."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[5].dialogueLines.Array.data[1].text
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[6].dialogueLines.Array.data[0].text
+      value: 'Okay, weirdo. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[6].dialogueLines.Array.data[1].text
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[7].dialogueLines.Array.data[0].text
+      value: "I\u2019ve just moved here. Taking a walk around my new neighbourhood,
+        you know?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[7].dialogueLines.Array.data[1].text
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[8].dialogueLines.Array.data[0].text
+      value: "Welcome to the neighbourhood then. Just some friendly advice, if you
+        do see a human don\u2019t let them into Corteos office. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[0].dialogueLines.Array.data[0].voiceClip
       value: 
+      objectReference: {fileID: 8300000, guid: 040f7135a651c7f48b01be1a83246637, type: 3}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[2].dialogueLines.Array.data[0].voiceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f0086abf71f3de42b04d01cebff5fc5, type: 3}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[4].dialogueLines.Array.data[0].voiceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: dd670170e69650540b6bc4bad3bccaad, type: 3}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[5].dialogueLines.Array.data[0].voiceClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[5].dialogueLines.Array.data[1].voiceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b3bf2d91a4fb62449a3ca3df1ed2c583, type: 3}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[6].dialogueLines.Array.data[0].voiceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 317abdef31b680645b2100f4cee026ff, type: 3}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[6].dialogueLines.Array.data[1].voiceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b3bf2d91a4fb62449a3ca3df1ed2c583, type: 3}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[7].dialogueLines.Array.data[0].voiceClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[7].dialogueLines.Array.data[1].voiceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b3bf2d91a4fb62449a3ca3df1ed2c583, type: 3}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[8].dialogueLines.Array.data[0].voiceClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 402a94777a0d22142ae8958883884e37, type: 3}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[2].choices.Array.data[0].responseLines.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747635230894873256, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: mainCamera
@@ -1117,3 +1457,4 @@ SceneRoots:
   - {fileID: 352484618}
   - {fileID: 4601693642482657266}
   - {fileID: 1356875188}
+  - {fileID: 1056235211}

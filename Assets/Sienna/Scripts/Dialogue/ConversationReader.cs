@@ -88,6 +88,8 @@ public class ConversationReader : MonoBehaviour
         started = false;
         waitForNext = false;
 
+        audioSource.Stop();
+
         ToggleWindow(false);
 
         StopAllCoroutines();
@@ -137,6 +139,7 @@ public class ConversationReader : MonoBehaviour
         if (!started)
             return;
 
+        
 
         if (interactAction.WasPressedThisFrame()) // new input system
         {
