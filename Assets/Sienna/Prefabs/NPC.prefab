@@ -990,43 +990,31 @@ MonoBehaviour:
   dialogueChoicePanel: {fileID: 2717679330030669385}
   steps:
   - speaker: Monster
-    dialogues:
-    - Howdee.
+    dialogueLines: []
     choices: []
   - speaker: Player
-    dialogues:
-    - Sup!
+    dialogueLines: []
     choices: []
   - speaker: Monster
-    dialogues:
-    - You a human or a monster?
+    dialogueLines: []
     choices:
     - buttonText: Monster
-      response:
-      - Oh chill.
-      - We're cool then.
+      responseLines: []
       monsterPoints: 5
       nextStep: 4
     - buttonText: Human.
-      response:
-      - Wtf gross.
+      responseLines: []
       monsterPoints: -5
       nextStep: 4
     - buttonText: You tell me.
-      response:
-      - Uh i guess you're you.
+      responseLines: []
       monsterPoints: 0
       nextStep: 4
   - speaker: Player
-    dialogues:
-    - ...
-    - Monster.
-    - Trust.
+    dialogueLines: []
     choices: []
   - speaker: Monster
-    dialogues:
-    - Thanks for telling me
-    - Just had to check.
+    dialogueLines: []
     choices: []
   trasitionDelay: 0
   currentStep: 0
@@ -1045,9 +1033,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationReader
   interactActionRef: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  text: {fileID: 8997157393112884505}
+  textObject: {fileID: 8997157393112884505}
   dialogueText: {fileID: 1457362335661308175}
   nameText: {fileID: 3618819592246776987}
+  audioSource: {fileID: 0}
   writingSpeed: 0
   started: 0
   waitForNext: 0

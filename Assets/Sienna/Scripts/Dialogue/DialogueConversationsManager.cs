@@ -88,7 +88,7 @@ public class DialogueConversationsManager : MonoBehaviour
         }
         
         currentSpeaker = step.speaker;
-        cReader.StartDialogue(step.speaker, step.dialogues);
+        cReader.StartDialogue(step.speaker, step.dialogueLines);
     }
 
     private IEnumerator WaitAndAdvance()
@@ -143,7 +143,7 @@ public class DialogueConversationsManager : MonoBehaviour
         
         ShowChoices(steps[currentStep], false);
         
-        cReader.StartDialogue(currentSpeaker, choice.response);
+        cReader.StartDialogue(currentSpeaker, choice.responseLines);
         waitingForChoice = false;
 
         //StepAfterChoice(index);

@@ -268,9 +268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b968cfac8a7168946a166d0d62888385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
-  interactActionRef: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  conversationScript: {fileID: 0}
-  exclamationSprite: {fileID: 0}
 --- !u!1 &460286371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,8 +1078,28 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[0].dialogues.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: 'steps.Array.data[0].dialogues.Array.data[1]'
+      value: Howdee.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[0].dialogueLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: steps.Array.data[0].dialogueLines.Array.data[0].text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7747635230894873256, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1100298667}
+    - target: {fileID: 8804553917369439736, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+      propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1100298667}
     m_RemovedComponents: []

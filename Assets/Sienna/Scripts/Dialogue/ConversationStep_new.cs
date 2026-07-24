@@ -8,7 +8,7 @@ public class ConversationStep_new
 {
     public string speaker;  // Which dialogue component to use
     
-    public List<string> dialogues;  // dialogue list
+    //public List<string> dialogues;  // dialogue list
     public List<DialogueLine> dialogueLines;
 
     public List<DialogueChoice> choices;
@@ -24,5 +24,18 @@ public class DialogueLine
 {
     public string text;
     public AudioClip voiceClip;
+
+}
+
+[System.Serializable]
+public class DialogueChoice
+{
+    public string buttonText;
+
+    public List<DialogueLine> responseLines;
+
+    public int monsterPoints;
+    public int nextStep;
+
 
 }
