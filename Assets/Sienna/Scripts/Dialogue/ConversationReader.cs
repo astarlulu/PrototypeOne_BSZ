@@ -8,14 +8,16 @@ using UnityEngine.InputSystem;
 public class ConversationReader : MonoBehaviour
 {
     // public ConversationStep_new cStep;
-    private List<string> currentDialogue;
+    private List<DialogueLine> currentDialogue;
 
     private InputAction interactAction; // replace mouse click
     [SerializeField] private InputActionReference interactActionRef;
 
-    [SerializeField] private GameObject text;
+    [SerializeField] private GameObject textObject;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private TMP_Text nameText;
+
+    [SerializeField] private AudioSource audioSource;
 
 
     private int indexStart;
@@ -44,11 +46,11 @@ public class ConversationReader : MonoBehaviour
 
     private void ToggleWindow(bool show)
     {
-        text.SetActive(show);
+        textObject.SetActive(show);
 
     }
 
-    public void StartDialogue(string speaker, List<string> dialogue)
+    public void StartDialogue(string speaker, List<DialogueLine> dialogue)
     {
         
         if (started)
@@ -99,19 +101,32 @@ public class ConversationReader : MonoBehaviour
 
         yield return new WaitForSeconds(writingSpeed);
 
-        string current = currentDialogue[index];
+        DialogueLine current = currentDialogue[index];
+        
+        PlayVoice(current);
 
         charIndex = 0;
 
-        while (charIndex < current.Length)
+        while (charIndex < current.text.Length)
         {
-            dialogueText.text += current[charIndex];
+            dialogueText.text += current.text[charIndex];
             charIndex++;
             yield return new WaitForSeconds(writingSpeed);
         }
 
         waitForNext = true;
 
+    }
+
+    // play voice line code
+    public void PlayVoice(DialogueLine current)
+    {
+        if (current.voiceClip != null)
+        {
+            audioSource.Stop();
+            audioSource.clip = current.voiceClip;
+            audioSource.Play();
+        }
     }
 
 
