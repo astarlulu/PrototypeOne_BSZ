@@ -36,9 +36,13 @@ public class InteractTrigger : MonoBehaviour
         exclamationSprite.enabled = look && !conversationScript.conversationActive; //if looking at NPC + no conversation happening show !
 
         
+        //changed by Brooke to check if can interact before starting ceonveration (has to interact with security first)
         if (look && interactAction.WasPressedThisFrame() && !conversationScript.conversationActive)
         {
-            conversationScript.StartConversation(); //start conversation when looking at NPC and pressing E
+            if (GameStartManager.Instance.CanInteract(gameObject)) //checks what layer the raycast is hitting (see if securty layer)
+            {
+                conversationScript.StartConversation(); //start conversation when looking at NPC and pressing E
+            }
         }
 
         

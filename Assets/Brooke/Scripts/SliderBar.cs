@@ -17,9 +17,9 @@ public class SliderBar : MonoBehaviour
     void Start()
     {
         //point values initlised
-        currentPoints = maxPoints;
+        currentPoints = 0;
         sliderBar.maxValue = maxPoints;
-        sliderBar.value = maxPoints;
+        sliderBar.value = currentPoints;
 
     }
 
