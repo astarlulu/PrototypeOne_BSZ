@@ -39,9 +39,18 @@ public class InteractTrigger : MonoBehaviour
         //changed by Brooke to check if can interact before starting ceonveration (has to interact with security first)
         if (look && interactAction.WasPressedThisFrame() && !conversationScript.conversationActive)
         {
+
             if (GameStartManager.Instance.CanInteract(gameObject)) //checks what layer the raycast is hitting (see if securty layer)
             {
-                conversationScript.StartConversation(); //start conversation when looking at NPC and pressing E
+                // If this is the security unlock everyone else.
+                if (((1 << gameObject.layer) & GameStartManager.Instance.securityLayer) != 0)
+                {
+                    GameStartManager.Instance.InteractWithAllMonsters();
+                }
+
+                conversationScript.StartConversation();//start conversation when looking at NPC and pressing E
+
+
             }
         }
 
@@ -49,6 +58,7 @@ public class InteractTrigger : MonoBehaviour
         if (!look && conversationScript.conversationActive)
         {
             conversationScript.EndConversation(); // end conversation if the player looks away/replacing the leave collider - can change to when conversation ends?
+            Debug.Log("Looking away");
         }
     }
 

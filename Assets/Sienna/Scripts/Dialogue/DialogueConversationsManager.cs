@@ -75,6 +75,7 @@ public class DialogueConversationsManager : MonoBehaviour
     {
         conversationActive = false;
         steps.ForEach(step => cReader.EndDialogue());
+
     }
 
     private void StartStep(ConversationStep_new step)
