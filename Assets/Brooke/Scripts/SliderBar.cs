@@ -11,7 +11,7 @@ public class SliderBar : MonoBehaviour
 
     [Header("Points")]
     [SerializeField] private float maxPoints = 20f; //default to be safe
-    [SerializeField] private float currentPoints;
+    [SerializeField] public float currentPoints;
 
 
     void Start()

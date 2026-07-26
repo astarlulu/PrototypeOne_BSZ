@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41.275284, y: 17.550964}
+  m_AnchoredPosition: {x: -41.275284, y: 31}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3945737737903502349
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -315.16342, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -399,7 +399,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3914939, y: -7.7431335}
+  m_AnchoredPosition: {x: 1.3914939, y: -10}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1492719346857531383
@@ -457,15 +457,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -496,7 +496,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -143.84538, y: 0, z: -143.84544, w: 0}
+  m_margin: {x: -181.857, y: 0, z: -170.53287, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -992,30 +992,34 @@ MonoBehaviour:
   - speaker: Monster
     dialogueLines: []
     choices: []
+    endOfConversation: 0
   - speaker: Player
     dialogueLines: []
     choices: []
+    endOfConversation: 0
   - speaker: Monster
     dialogueLines: []
     choices:
     - buttonText: Monster
-      responseLines: []
       monsterPoints: 5
       nextStep: 4
     - buttonText: Human.
-      responseLines: []
       monsterPoints: -5
       nextStep: 4
     - buttonText: You tell me.
-      responseLines: []
       monsterPoints: 0
       nextStep: 4
+    endOfConversation: 0
   - speaker: Player
     dialogueLines: []
     choices: []
+    endOfConversation: 0
   - speaker: Monster
     dialogueLines: []
     choices: []
+    endOfConversation: 0
+  animator: {fileID: 5445762935199641479}
+  securityAnimations: 0
   trasitionDelay: 0
   currentStep: 0
   conversationActive: 0
@@ -1405,6 +1409,7 @@ GameObject:
   - component: {fileID: 3251793422913884337}
   - component: {fileID: 1225938127320393227}
   - component: {fileID: 7747635230894873256}
+  - component: {fileID: 5445762935199641479}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -1423,7 +1428,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.09000003, z: 0}
   m_LocalScale: {x: 0.64, y: 0.64, z: 0.64}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4675959903501895020}
   m_Father: {fileID: 5162743103867183856}
@@ -1500,6 +1505,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpriteTrackCamera
   mainCamera: {fileID: 0}
+--- !u!95 &5445762935199641479
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6511249958424002327}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c502f4d7c82120647b946fce41e58e79, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7415482928891509069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,9 +1620,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
   interactActionRef: {fileID: 1781555164194001046, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   conversationScript: {fileID: 4589619301702869650}
-  exclamationSprite: {fileID: 1004292251628384460}
+  exclamationSprites:
+  - {fileID: 1153690587265400079}
   playerCamera: {fileID: 0}
   interactionRange: 8
+  lookCollider: {fileID: 2243288121393556959}
 --- !u!1 &7469629545864724338
 GameObject:
   m_ObjectHideFlags: 0
