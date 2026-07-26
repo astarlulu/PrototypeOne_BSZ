@@ -151,6 +151,7 @@ MonoBehaviour:
   securityLayer:
     serializedVersion: 2
     m_Bits: 64
+  conversation1: {fileID: 0}
   interactionSecurityComplete: 0
 --- !u!4 &1945100
 Transform:
@@ -9681,6 +9682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d135d4e2a254047a6d9273d741ef9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  sliderBar: {fileID: 0}
   monsterScore: 0
 --- !u!4 &319134845
 Transform:
@@ -18492,6 +18494,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0273295fc74aa8418f5a64fc254499f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  dialogueClick: {fileID: 8300000, guid: 42e750e7b95d558418f823bf28b03faa, type: 3}
+  gainPoints: {fileID: 8300000, guid: 8490f2a8715d394499a4b75fc8c0ce7e, type: 3}
+  losePoints: {fileID: 8300000, guid: 0a5181dead758134c8b6b64e410ae696, type: 3}
 --- !u!4 &607857696
 Transform:
   m_ObjectHideFlags: 0
@@ -59102,7 +59107,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ee977fec7291d574e8d3df7b762d99f8, type: 3}
   - {fileID: 8300000, guid: e1a5f04840c2d874aa4f0cbb2636ddec, type: 3}
   - {fileID: 8300000, guid: e874a3fef62ccbe44ae8ddfd39ed4661, type: 3}
-  magnitudeReader: 0
 --- !u!1001 &1808460733
 PrefabInstance:
   m_ObjectHideFlags: 0
