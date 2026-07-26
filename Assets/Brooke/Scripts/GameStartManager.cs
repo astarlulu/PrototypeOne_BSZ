@@ -49,7 +49,7 @@ public class GameStartManager : MonoBehaviour
         if(!firstConversationDone)
         {
             firstConversationDone = true;
-            return conversation1;
+            conversation1.StartConversation();
         }
 
         return GameEndingManager.Instance.GetSecurityConversation();

@@ -1,10 +1,13 @@
-using Unity.Collections;
-using UnityEngine;
-using UnityEngine.SceneManagement;
 using System.Collections;
+using Unity.Collections;
+using Unity.VectorGraphics;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    [SerializeField] string sceneName;
     public void LoadSceneByName(string sceneName)
     {
         if (!string.IsNullOrEmpty(sceneName))

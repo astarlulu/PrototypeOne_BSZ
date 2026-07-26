@@ -30,18 +30,20 @@ public class GameEndingManager : MonoBehaviour
             if(sliderBar.HasMaxPoints())
             {
                 Debug.Log("You win yay into Corteos office we go");
-                return conversation3;
+                conversation3.StartConversation();
             }
 
             //if not enough points will player conversation 2/get more points conversations
             Debug.Log("Need more points");
-            return conversation2;
+            conversation2.StartConversation();
 
         }
 
         if (sliderBar.HasMaxPoints())
-            return conversation3;
+            conversation3.StartConversation();
 
-        return conversation2;
+        conversation2.StartConversation();
+
+        return GameEndingManager.Instance.GetSecurityConversation();
     }
 }

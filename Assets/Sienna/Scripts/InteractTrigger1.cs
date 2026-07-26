@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -58,7 +59,7 @@ public class InteractTrigger : MonoBehaviour
                     managerToUse = GameStartManager.Instance.GetSecurityConversation();
                 }
 
-                conversationScript.StartConversation();//start conversation when looking at NPC and pressing E
+                managerToUse.StartConversation();//start conversation when looking at NPC and pressing E
 
 
             }
