@@ -125,7 +125,7 @@ public class ConversationReader : MonoBehaviour
     }
     public IEnumerator PreventRepeat()
     {
-        yield return new WaitForSeconds(writingSpeed);
+        yield return new WaitForSeconds(1);
     }
     // play voice line code
     public void PlayVoice(DialogueLine current)

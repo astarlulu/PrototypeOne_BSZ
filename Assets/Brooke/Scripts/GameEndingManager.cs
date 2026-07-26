@@ -58,7 +58,7 @@ public class GameEndingManager : MonoBehaviour
     {
         if (!endingConversationPlays && startManager.firstConversationDone)
         {
-            endingConversationPlays = true;
+            //endingConversationPlays = true;
 
             //if the player has 20 points/max pouinst then conversation 3/ending convo will play
             if (sliderBar.HasMaxPoints())
