@@ -5,6 +5,8 @@ using System.Collections;
 
 public class SceneLoader : MonoBehaviour
 {
+    [SerializeField] private string sceneName;
+
     public void LoadSceneByName(string sceneName)
     {
         if (!string.IsNullOrEmpty(sceneName))
