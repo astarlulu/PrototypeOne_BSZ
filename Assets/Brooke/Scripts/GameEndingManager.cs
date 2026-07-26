@@ -13,6 +13,8 @@ public class GameEndingManager : MonoBehaviour
     [SerializeField] private DialogueConversationsManager conversation2;
     [SerializeField] private DialogueConversationsManager conversation3;
 
+    [SerializeField] private GameStartManager startManager;
+
     private bool endingConversationPlays;
 
     private void Awake()
@@ -20,14 +22,40 @@ public class GameEndingManager : MonoBehaviour
         Instance = this;
     }
 
-    public DialogueConversationsManager GetSecurityConversation()
+    //public DialogueConversationsManager GetSecurityConversation()
+    //{
+    //    if(!endingConversationPlays && startManager.firstConversationDone)
+    //    {
+    //        endingConversationPlays = true;
+
+    //        //if the player has 20 points/max pouinst then conversation 3/ending convo will play
+    //        if(sliderBar.HasMaxPoints())
+    //        {
+    //            Debug.Log("You win yay into Corteos office we go");
+    //            conversation3.StartConversation();
+    //        }
+
+    //        //if not enough points will player conversation 2/get more points conversations
+    //        Debug.Log("Need more points");
+    //        conversation2.StartConversation();
+
+    //    }
+
+    //    if (sliderBar.HasMaxPoints())
+    //        conversation3.StartConversation();
+
+    //    conversation2.StartConversation();
+
+    //    return GameEndingManager.Instance.GetSecurityConversation();
+    //}
+    public void StartEndSecurityConversation()
     {
-        if(!endingConversationPlays)
+        if (!endingConversationPlays && startManager.firstConversationDone)
         {
             endingConversationPlays = true;
 
             //if the player has 20 points/max pouinst then conversation 3/ending convo will play
-            if(sliderBar.HasMaxPoints())
+            if (sliderBar.HasMaxPoints())
             {
                 Debug.Log("You win yay into Corteos office we go");
                 conversation3.StartConversation();
@@ -44,6 +72,5 @@ public class GameEndingManager : MonoBehaviour
 
         conversation2.StartConversation();
 
-        return GameEndingManager.Instance.GetSecurityConversation();
     }
 }

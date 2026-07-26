@@ -9,7 +9,7 @@ public class GameStartManager : MonoBehaviour
     [SerializeField] private DialogueConversationsManager conversation1;
 
     [SerializeField] private bool interactionSecurityComplete = false; //starting off can interact with anyone else (other than security)
-    private bool firstConversationDone; //if first convo done
+    public bool firstConversationDone; //if first convo done
     
 
     //private bool securityConversationTriggered = false; //stops the startmanager from ever happening again
@@ -44,15 +44,23 @@ public class GameStartManager : MonoBehaviour
         Debug.Log("Now all monsters can be interacted with");
     }
 
-    public DialogueConversationsManager GetSecurityConversation()
-    {
-        if(!firstConversationDone)
-        {
-            firstConversationDone = true;
-            conversation1.StartConversation();
-        }
+    //public DialogueConversationsManager GetSecurityConversation()
+    //{
+    //    if(!firstConversationDone)
+    //    {
+    //        firstConversationDone = true;
+    //        conversation1.StartConversation();
+    //    }
 
-        return GameEndingManager.Instance.GetSecurityConversation();
+    //    return GameEndingManager.Instance.GetSecurityConversation();
+    //}
+    public void StartFirstSecurityConversation()
+    {
+        if (!firstConversationDone)
+        {
+            conversation1.StartConversation();
+            firstConversationDone = true;
+        }
     }
 
 }

@@ -47,8 +47,8 @@ public class InteractTrigger : MonoBehaviour
         //changed by Brooke to check if can interact before starting ceonveration (has to interact with security first)
         if (look && interactAction.WasPressedThisFrame() && !conversationScript.conversationActive)
         {
-
-            DialogueConversationsManager managerToUse = conversationScript;
+            // With get dialogue manager vvv
+            // DialogueConversationsManager managerToUse = conversationScript;
 
             if (GameStartManager.Instance.CanInteract(gameObject)) //checks what layer the raycast is hitting (see if securty layer)
             {
@@ -56,10 +56,15 @@ public class InteractTrigger : MonoBehaviour
                 if (((1 << gameObject.layer) & GameStartManager.Instance.securityLayer) != 0)
                 {
                     GameStartManager.Instance.InteractWithAllMonsters();
-                    managerToUse = GameStartManager.Instance.GetSecurityConversation();
+                    //managerToUse = GameStartManager.Instance.GetSecurityConversation();
+
+                    if(GameStartManager.Instance.firstConversationDone != true)
+                        GameStartManager.Instance.StartFirstSecurityConversation();
+                    else
+                        GameEndingManager.Instance.StartEndSecurityConversation();
                 }
 
-                managerToUse.StartConversation();//start conversation when looking at NPC and pressing E
+                conversationScript.StartConversation();//start conversation when looking at NPC and pressing E
 
 
             }

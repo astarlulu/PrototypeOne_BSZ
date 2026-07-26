@@ -98,7 +98,6 @@ public class DialogueConversationsManager : MonoBehaviour
 
             if (currentSpeaker == "John Apple" && steps[currentStep].endOfConversation == true)
             {
-                Debug.Log("apple death");
                 animator.SetTrigger("appleDeath");
             }
         }

@@ -153,6 +153,7 @@ MonoBehaviour:
     m_Bits: 64
   conversation1: {fileID: 1535080723}
   interactionSecurityComplete: 0
+  firstConversationDone: 0
 --- !u!4 &1945100
 Transform:
   m_ObjectHideFlags: 0
@@ -58880,6 +58881,7 @@ MonoBehaviour:
   sliderBar: {fileID: 790244061}
   conversation2: {fileID: 2100342487}
   conversation3: {fileID: 2100342486}
+  startManager: {fileID: 1945099}
 --- !u!4 &1715752857
 Transform:
   m_ObjectHideFlags: 0
