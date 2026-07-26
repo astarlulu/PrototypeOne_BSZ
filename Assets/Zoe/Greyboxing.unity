@@ -58882,6 +58882,8 @@ MonoBehaviour:
   conversation2: {fileID: 2100342487}
   conversation3: {fileID: 2100342486}
   startManager: {fileID: 1945099}
+  sceneLoader: {fileID: 1611886145}
+  sceneName: EndingCutscene
 --- !u!4 &1715752857
 Transform:
   m_ObjectHideFlags: 0

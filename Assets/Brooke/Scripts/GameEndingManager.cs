@@ -1,4 +1,6 @@
+using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class GameEndingManager : MonoBehaviour
 {
@@ -15,7 +17,11 @@ public class GameEndingManager : MonoBehaviour
 
     [SerializeField] private GameStartManager startManager;
 
+    [SerializeField] private SceneLoader sceneLoader;
+    [SerializeField] private string sceneName;
+
     private bool endingConversationPlays;
+    private bool endingConversationStarted;
 
     private void Awake()
     {
@@ -58,19 +64,31 @@ public class GameEndingManager : MonoBehaviour
             if (sliderBar.HasMaxPoints())
             {
                 Debug.Log("You win yay into Corteos office we go");
+                endingConversationStarted = true;
                 conversation3.StartConversation();
+                
             }
-
-            //if not enough points will player conversation 2/get more points conversations
-            Debug.Log("Need more points");
-            conversation2.StartConversation();
-
+            else
+            {
+                //if not enough points will player conversation 2/get more points conversations
+                Debug.Log("Need more points");
+                conversation2.StartConversation();
+            }
         }
 
-        if (sliderBar.HasMaxPoints())
-            conversation3.StartConversation();
+    }
 
-        conversation2.StartConversation();
-
+    //loading scene afyer xvonsersation 3 has ended
+    public void EndingConversationStart()
+    {
+            if (endingConversationStarted)
+            {
+                sceneLoader.LoadSceneByName(sceneName);
+            }
+            else
+            {
+                Debug.Log("cannot load scene");
+            }
+            
     }
 }

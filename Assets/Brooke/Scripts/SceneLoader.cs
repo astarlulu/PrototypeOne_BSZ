@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] string sceneName;
+    [SerializeField] public string sceneName;
     public void LoadSceneByName(string sceneName)
     {
         if (!string.IsNullOrEmpty(sceneName))

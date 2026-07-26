@@ -132,7 +132,8 @@ public class DialogueConversationsManager : MonoBehaviour
         }
         conversationActive = false;
         steps.ForEach(step => cReader.EndDialogue());
-        
+
+        GameEndingManager.Instance.EndingConversationStart();
 
     }
 
