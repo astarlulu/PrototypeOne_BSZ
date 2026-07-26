@@ -141,11 +141,19 @@ public class DialogueConversationsManager : MonoBehaviour
 
     public void SelectChoice(int index)
     {
+        AudioManager.instance.PlaySFX(AudioManager.instance.dialogueClick);
         Debug.Log("Dialogue choice is selcted.");
         DialogueChoice choice = currentChoices[index];
         
         GameManager.Instance.IncreaseMonsterScore(choice.monsterPoints);
-        
+        if (choice.monsterPoints > 0)
+        {
+            AudioManager.instance.PlaySFX(AudioManager.instance.gainPoints);
+        }
+        else if (choice.monsterPoints < 0)
+        {
+            AudioManager.instance.PlaySFX(AudioManager.instance.losePoints);
+        }
         ShowChoices(steps[currentStep], false);
         
         // cReader.StartDialogue(currentSpeaker, choice.responseLines);

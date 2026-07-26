@@ -3,13 +3,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Vector2 input; //Takes our input
+    public Vector2 input; //Takes our input
     Vector3 moveDirection; //Which way are we going?
 
     public Transform orientation;
     public float moveSpeed = 7;
 
     Rigidbody rb;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
