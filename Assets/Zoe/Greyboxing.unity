@@ -24702,7 +24702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4675959903501895020, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.21
+      value: -0.55
       objectReference: {fileID: 0}
     - target: {fileID: 5162743103867183856, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_LocalScale.x
@@ -29879,11 +29879,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: steps.Array.data[0].choices.Array.data[1].nextStep
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: steps.Array.data[0].choices.Array.data[2].nextStep
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: steps.Array.data[6].choices.Array.data[0].nextStep
@@ -44610,7 +44610,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: c2ab723f0f6e18744bbb57c0952af7ea, type: 3}
     - target: {fileID: 4675959903501895020, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.46
+      value: -0.614
       objectReference: {fileID: 0}
     - target: {fileID: 5162743103867183856, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_LocalScale.x
@@ -55154,7 +55154,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 402a94777a0d22142ae8958883884e37, type: 3}
     - target: {fileID: 4675959903501895020, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.17
+      value: -0.44
       objectReference: {fileID: 0}
     - target: {fileID: 5162743103867183856, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: m_LocalScale.x
@@ -71135,7 +71135,7 @@ MonoBehaviour:
     choices: []
     endOfConversation: 1
   animator: {fileID: 1645192078}
-  securityAnimations: 0
+  securityAnimations: 1
   trasitionDelay: 0
   currentStep: 0
   conversationActive: 0
@@ -71171,7 +71171,7 @@ MonoBehaviour:
     choices: []
     endOfConversation: 1
   animator: {fileID: 1645192078}
-  securityAnimations: 0
+  securityAnimations: 1
   trasitionDelay: 0
   currentStep: 0
   conversationActive: 0
