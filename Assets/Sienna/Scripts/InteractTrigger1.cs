@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,20 +7,24 @@ public class InteractTrigger : MonoBehaviour
     // keep all these references
     [SerializeField] private InputActionReference interactActionRef; // input action
     [SerializeField] private DialogueConversationsManager conversationScript; // conversation script reference
-    [SerializeField] private SpriteRenderer exclamationSprite; // exclamation point sprite
+    [SerializeField] private List<GameObject> exclamationSprites; // exclamation point sprite
     [SerializeField] private Camera playerCamera; //ZOE ADD
     [SerializeField] private float interactionRange = 8f; //ZOE ADD
+
+    [SerializeField] private BoxCollider lookCollider;
 
     private bool look = false; // check if the player is close enough
 
     private InputAction interactAction; //for new unity system
 
+    
    
 
     private void Awake()
     {
         interactAction = interactActionRef.action; // input stuff
-        exclamationSprite.enabled = false; // exclamation sprite off on awake
+        foreach(GameObject exclamationSprite in exclamationSprites)
+            exclamationSprite.SetActive(false); // exclamation sprite off on awake
     }
 
 
@@ -31,14 +36,18 @@ public class InteractTrigger : MonoBehaviour
         RaycastHit hit;
 
         look = Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, interactionRange) //origin/go forwards from camera/hit NPC/ray cast length (line 11)
-               && hit.collider.gameObject == gameObject; //
+               && hit.collider == lookCollider; //
 
-        exclamationSprite.enabled = look && !conversationScript.conversationActive; //if looking at NPC + no conversation happening show !
+        foreach (GameObject exclamationSprite in exclamationSprites)
+            exclamationSprite.SetActive(look && !conversationScript.conversationActive);
+        //if looking at NPC + no conversation happening show !
 
-        
+
         //changed by Brooke to check if can interact before starting ceonveration (has to interact with security first)
         if (look && interactAction.WasPressedThisFrame() && !conversationScript.conversationActive)
         {
+
+            DialogueConversationsManager managerToUse = conversationScript;
 
             if (GameStartManager.Instance.CanInteract(gameObject)) //checks what layer the raycast is hitting (see if securty layer)
             {
@@ -46,6 +55,7 @@ public class InteractTrigger : MonoBehaviour
                 if (((1 << gameObject.layer) & GameStartManager.Instance.securityLayer) != 0)
                 {
                     GameStartManager.Instance.InteractWithAllMonsters();
+                    managerToUse = GameStartManager.Instance.GetSecurityConversation();
                 }
 
                 conversationScript.StartConversation();//start conversation when looking at NPC and pressing E

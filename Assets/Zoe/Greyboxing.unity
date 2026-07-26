@@ -151,8 +151,8 @@ MonoBehaviour:
   securityLayer:
     serializedVersion: 2
     m_Bits: 64
+  conversation1: {fileID: 1535080723}
   interactionSecurityComplete: 0
-  conversation1: {fileID: 2100342489}
 --- !u!4 &1945100
 Transform:
   m_ObjectHideFlags: 0
@@ -4850,10 +4850,6 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1166359329}
-    - target: {fileID: 8804553917369439736, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-      propertyPath: exclamationSprite
-      value: 
-      objectReference: {fileID: 1168278912}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5531114629280846174, guid: bbc4354130407ce42bf47dd011014958, type: 3}
@@ -7525,11 +7521,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5b78a83763794142a7e1df0b06b25a6, type: 3}
---- !u!212 &246897214 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1004292251628384460, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-  m_PrefabInstance: {fileID: 1611233631}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &246925482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14935,11 +14926,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 4def2a3de2fefda48b1701b14e508847, type: 3}
   m_PrefabInstance: {fileID: 468198706}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &469393997 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1004292251628384460, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-  m_PrefabInstance: {fileID: 934683136}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &469677843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16128,11 +16114,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: f5b78a83763794142a7e1df0b06b25a6, type: 3}
   m_PrefabInstance: {fileID: 204656579}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &513023042 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1004292251628384460, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-  m_PrefabInstance: {fileID: 1331417391}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &513032665 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 4def2a3de2fefda48b1701b14e508847, type: 3}
@@ -16989,11 +16970,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 4def2a3de2fefda48b1701b14e508847, type: 3}
   m_PrefabInstance: {fileID: 537895289}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &539108357 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1004292251628384460, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-  m_PrefabInstance: {fileID: 1535080721}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &544805579
 PrefabInstance:
@@ -24764,10 +24740,6 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1166359329}
-    - target: {fileID: 8804553917369439736, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-      propertyPath: exclamationSprite
-      value: 
-      objectReference: {fileID: 1872963504}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5531114629280846174, guid: bbc4354130407ce42bf47dd011014958, type: 3}
@@ -30333,10 +30305,6 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1166359329}
-    - target: {fileID: 8804553917369439736, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-      propertyPath: exclamationSprite
-      value: 
-      objectReference: {fileID: 469393997}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5531114629280846174, guid: bbc4354130407ce42bf47dd011014958, type: 3}
@@ -36285,10 +36253,6 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1166359329}
-    - target: {fileID: 8804553917369439736, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-      propertyPath: exclamationSprite
-      value: 
-      objectReference: {fileID: 1840515899}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5531114629280846174, guid: bbc4354130407ce42bf47dd011014958, type: 3}
@@ -37132,11 +37096,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4def2a3de2fefda48b1701b14e508847, type: 3}
---- !u!212 &1126055280 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1004292251628384460, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-  m_PrefabInstance: {fileID: 1400288418}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1126419528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38741,11 +38700,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: f5b78a83763794142a7e1df0b06b25a6, type: 3}
   m_PrefabInstance: {fileID: 1167927448}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1168278912 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1004292251628384460, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-  m_PrefabInstance: {fileID: 177873033}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1168495013
 PrefabInstance:
@@ -44698,10 +44652,6 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1166359329}
-    - target: {fileID: 8804553917369439736, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-      propertyPath: exclamationSprite
-      value: 
-      objectReference: {fileID: 513023042}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5531114629280846174, guid: bbc4354130407ce42bf47dd011014958, type: 3}
@@ -48128,10 +48078,6 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1166359329}
-    - target: {fileID: 8804553917369439736, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-      propertyPath: exclamationSprite
-      value: 
-      objectReference: {fileID: 1126055280}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5531114629280846174, guid: bbc4354130407ce42bf47dd011014958, type: 3}
@@ -52709,7 +52655,7 @@ PrefabInstance:
       objectReference: {fileID: 1645192078}
     - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: conversationName
-      value: Conversation 1
+      value: conversation1
       objectReference: {fileID: 0}
     - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: steps.Array.size
@@ -53210,10 +53156,6 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8804553917369439736, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-      propertyPath: exclamationSprite
-      value: 
-      objectReference: {fileID: 539108357}
-    - target: {fileID: 8804553917369439736, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: securityLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
@@ -53253,6 +53195,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3285241608727843361, guid: bbc4354130407ce42bf47dd011014958, type: 3}
   m_PrefabInstance: {fileID: 1535080721}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1535080723 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
+  m_PrefabInstance: {fileID: 1535080721}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100342482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1632d2a561417f14b9e1bcbb283f6df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueConversationsManager
 --- !u!4 &1536817187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1dbf38f11aa2ea7449693484ebfa138b, type: 3}
@@ -55239,10 +55192,6 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1166359329}
-    - target: {fileID: 8804553917369439736, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-      propertyPath: exclamationSprite
-      value: 
-      objectReference: {fileID: 246897214}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5531114629280846174, guid: bbc4354130407ce42bf47dd011014958, type: 3}
@@ -58884,8 +58833,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameEndingManager
   sliderBar: {fileID: 790244061}
-  conversation2: {fileID: 2100342489}
-  conversation3: {fileID: 2100342489}
+  conversation2: {fileID: 2100342487}
+  conversation3: {fileID: 2100342486}
 --- !u!4 &1715752857
 Transform:
   m_ObjectHideFlags: 0
@@ -63369,11 +63318,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: f5b78a83763794142a7e1df0b06b25a6, type: 3}
   m_PrefabInstance: {fileID: 1839449011}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &1840515899 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1004292251628384460, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-  m_PrefabInstance: {fileID: 1098203666}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1840924413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: b32d582fd72647643883f1017549146b, type: 3}
@@ -64145,11 +64089,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 735dc1cf625b98b4893c265ff7936b81, type: 3}
   m_PrefabInstance: {fileID: 1871385571}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1872963504 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 1004292251628384460, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-  m_PrefabInstance: {fileID: 791098677}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1876666847
 PrefabInstance:
@@ -71116,7 +71055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1632d2a561417f14b9e1bcbb283f6df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversationsManager
-  conversationName: Conversation 3
+  conversationName: conversation3
   cReader: {fileID: 2100342485}
   dialogueChoicePanel: {fileID: 707298276}
   steps:
@@ -71150,6 +71089,8 @@ MonoBehaviour:
       voiceClip: {fileID: 8300000, guid: 53dec134fb0f728419ef2bba319604d7, type: 3}
     choices: []
     endOfConversation: 1
+  animator: {fileID: 1645192078}
+  securityAnimations: 0
   trasitionDelay: 0
   currentStep: 0
   conversationActive: 0
@@ -71166,7 +71107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1632d2a561417f14b9e1bcbb283f6df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueConversationsManager
-  conversationName: Conversation 2
+  conversationName: conversation2
   cReader: {fileID: 2100342485}
   dialogueChoicePanel: {fileID: 707298276}
   steps:
@@ -71184,21 +71125,12 @@ MonoBehaviour:
       voiceClip: {fileID: 8300000, guid: 2ef398f9e44215f419f50f0e2c07b85a, type: 3}
     choices: []
     endOfConversation: 1
+  animator: {fileID: 1645192078}
+  securityAnimations: 0
   trasitionDelay: 0
   currentStep: 0
   conversationActive: 0
   waitingForChoice: 0
---- !u!114 &2100342489 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
-  m_PrefabInstance: {fileID: 1535080721}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2100342482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1632d2a561417f14b9e1bcbb283f6df5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueConversationsManager
 --- !u!1001 &2101180400
 PrefabInstance:
   m_ObjectHideFlags: 0

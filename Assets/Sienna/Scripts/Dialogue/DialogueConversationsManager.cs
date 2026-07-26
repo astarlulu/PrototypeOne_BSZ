@@ -16,6 +16,10 @@ public class DialogueConversationsManager : MonoBehaviour
     [SerializeField] private ConversationReader cReader;
     [SerializeField] private GameObject dialogueChoicePanel;
     [SerializeField] private List<ConversationStep_new> steps = new List<ConversationStep_new>();
+
+    [SerializeField] private Animator animator;
+    [SerializeField] private bool securityAnimations;
+    
     
     
     [SerializeField] private float trasitionDelay = 0.5f;
@@ -25,6 +29,8 @@ public class DialogueConversationsManager : MonoBehaviour
     public int currentStep = 0;
     public bool conversationActive = false;
     private bool waitingForNext = false;
+
+ 
 
     private void Update()
     {
@@ -57,6 +63,48 @@ public class DialogueConversationsManager : MonoBehaviour
             }
             
         }
+
+        if(conversationActive == false)
+            currentSpeaker = " ";
+
+        if (securityAnimations == true)
+        {
+            if (currentSpeaker == "Security (Mustang Moustachio)")
+            {
+                animator.SetBool("talkingSecurity1", true);
+                animator.SetBool("talkingSecurity2", false);
+            }
+            else if (currentSpeaker == "Security")
+            {
+                animator.SetBool("talkingSecurity2", true);
+                animator.SetBool("talkingSecurity1", false);
+            }
+            else
+            {
+                animator.SetBool("talkingSecurity1", false);
+                animator.SetBool("talkingSecurity2", false);
+            }
+        } else
+        {
+            if (currentSpeaker != "You")
+            {
+                animator.SetBool("talking", true);
+
+            }
+            else
+            {
+                animator.SetBool("talking", false);
+            }
+
+            if (currentSpeaker == "John Apple" && steps[currentStep].endOfConversation == true)
+            {
+                Debug.Log("apple death");
+                animator.SetTrigger("appleDeath");
+            }
+        }
+        
+
+        
     }
 
     // ========= Dialogeu/Converstaion main =========
@@ -73,8 +121,19 @@ public class DialogueConversationsManager : MonoBehaviour
 
     public void EndConversation()
     {
+        if (securityAnimations == true)
+        {
+            animator.SetBool("talkingSecurity1", false);
+            animator.SetBool("talkingSecurity2", false);
+            
+        }
+        else
+        {
+            animator.SetBool("talking", false);
+        }
         conversationActive = false;
         steps.ForEach(step => cReader.EndDialogue());
+        
 
     }
 
@@ -141,11 +200,21 @@ public class DialogueConversationsManager : MonoBehaviour
 
     public void SelectChoice(int index)
     {
+        AudioManager.instance.PlaySFX(AudioManager.instance.dialogueClick);
         Debug.Log("Dialogue choice is selcted.");
         DialogueChoice choice = currentChoices[index];
         
         GameManager.Instance.IncreaseMonsterScore(choice.monsterPoints);
-        
+
+
+        if (choice.monsterPoints > 0)
+        {
+            AudioManager.instance.PlaySFX(AudioManager.instance.gainPoints);
+        }
+        else if (choice.monsterPoints < 0)
+        {
+            AudioManager.instance.PlaySFX(AudioManager.instance.losePoints);
+        }
         ShowChoices(steps[currentStep], false);
         
         // cReader.StartDialogue(currentSpeaker, choice.responseLines);
