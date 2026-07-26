@@ -29848,7 +29848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: steps.Array.data[9].dialogueLines.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: steps.Array.data[10].dialogueLines.Array.size
@@ -30020,7 +30020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: steps.Array.data[9].dialogueLines.Array.data[0].text
-      value: "UH\u2014"
+      value: 'Is this a real gun? '
       objectReference: {fileID: 0}
     - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: steps.Array.data[9].dialogueLines.Array.data[1].text
@@ -30193,7 +30193,7 @@ PrefabInstance:
     - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: steps.Array.data[9].dialogueLines.Array.data[0].voiceClip
       value: 
-      objectReference: {fileID: 8300000, guid: de997ed7b4444fd4ba811f1fade3951c, type: 3}
+      objectReference: {fileID: 8300000, guid: acb29d0e066f31340989e438ecc6f2c7, type: 3}
     - target: {fileID: 4589619301702869650, guid: bbc4354130407ce42bf47dd011014958, type: 3}
       propertyPath: steps.Array.data[9].dialogueLines.Array.data[1].voiceClip
       value: 

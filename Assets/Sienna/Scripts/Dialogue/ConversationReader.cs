@@ -83,14 +83,18 @@ public class ConversationReader : MonoBehaviour
     }
 
     public void EndDialogue()
-    {
+    {      
+        ToggleWindow(false);
+
+        StartCoroutine(PreventRepeat());
+
         waiting = false;
         started = false;
         waitForNext = false;
 
         audioSource.Stop();
 
-        ToggleWindow(false);
+  
 
         StopAllCoroutines();
     }
@@ -119,7 +123,10 @@ public class ConversationReader : MonoBehaviour
         waitForNext = true;
 
     }
-
+    public IEnumerator PreventRepeat()
+    {
+        yield return new WaitForSeconds(writingSpeed);
+    }
     // play voice line code
     public void PlayVoice(DialogueLine current)
     {
