@@ -40,12 +40,15 @@ public class InteractTrigger : MonoBehaviour
         if (look && interactAction.WasPressedThisFrame() && !conversationScript.conversationActive)
         {
 
+            DialogueConversationsManager managerToUse = conversationScript;
+
             if (GameStartManager.Instance.CanInteract(gameObject)) //checks what layer the raycast is hitting (see if securty layer)
             {
                 // If this is the security unlock everyone else.
                 if (((1 << gameObject.layer) & GameStartManager.Instance.securityLayer) != 0)
                 {
                     GameStartManager.Instance.InteractWithAllMonsters();
+                    managerToUse = GameStartManager.Instance.GetSecurityConversation();
                 }
 
                 conversationScript.StartConversation();//start conversation when looking at NPC and pressing E

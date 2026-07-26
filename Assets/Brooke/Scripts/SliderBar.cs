@@ -38,5 +38,10 @@ public class SliderBar : MonoBehaviour
         return currentPoints;
     }
 
+    public bool HasMaxPoints()
+    {
+        return currentPoints >= maxPoints;
+    }
+
 
 }
